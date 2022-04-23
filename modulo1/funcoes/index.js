@@ -65,4 +65,9 @@ function exer1Function(){
     const eu = 'Eu sou Adauto, tenho 33 anos, moro em São Paulo e sou estudante da LABENU'
     return eu
 }
-console.log(exer1Function)
+console.log(exer1Function
+    
+    // Imprimiu toda a descriçao da função...
+
+    // Professor to bem cançado hj essa semana foi punk pra mim termino no final de semana
+    
