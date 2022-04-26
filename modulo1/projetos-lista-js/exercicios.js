@@ -99,16 +99,6 @@ return(array[array.length - 1])
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
 
-const ultimo = array[array.length-1]
-const primeiro = array[0]
-array.splice(0,1, ultimo)
-array.splice(array.length - 1, 1, primeiro)
-  return array
-}
-
-// EXERCÍCIO 12
-function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  // implemente sua lógica aqui
  const compara = string1.toUpperCase() === string2.toUpperCase()
  return compara
 }
@@ -129,4 +119,4 @@ function checaAnoBissexto(ano) {
 function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
 
-}
+
