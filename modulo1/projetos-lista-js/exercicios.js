@@ -98,21 +98,7 @@ return(array[array.length - 1])
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
-  /*essa eu peguei ajuda dos colecas e meio q copiei o codigo pra poder entender pq todas 
-  as logica q eu criava acabava defrontando o uma com a outra creio q deva ter uma forma de fazer 
-  mais simples
- */
-const ultimo = array[array.length-1]
-const primeiro = array[0]
-array.splice(0,1, ultimo)
-array.splice(array.length - 1, 1, primeiro)
-  return array
-}
 
-// EXERCÍCIO 12
-function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  // implemente sua lógica aqui
- 
  const compara = string1.toUpperCase() === string2.toUpperCase()
  return compara
 }
@@ -120,15 +106,7 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
-/* - Para pessoas com menos de 20 anos, ou exatamente 20 anos, deve ser renovada de 5 em 5 anos (se for exatamente 5 anos, deve ser renovada).
-  - Para pessoas entre 20 e 50 anos, ou exatamente 50, deve ser renovada de 10 em 10 anos (se for exatamente 10 anos, deve ser renovada).
-  - Para pessoas acima dos 50 anos, deve ser renovada de 15 em 15 anos*/
 
- const anoAtual = prompt('Que ano vc se encontra?')
- const anoDeNascimento = prompt('Criatura quando vc nasceu?')
- const anoEmissao = prompt('Quando seu rg foi emtido')
-let idade = Number(anoAtual) - Number(anoDeNascimento)
- let comp1 = Number(idade) <= 20
 }
 
 // EXERCÍCIO 14
@@ -140,8 +118,5 @@ function checaAnoBissexto(ano) {
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
-
-}
-
 
 
