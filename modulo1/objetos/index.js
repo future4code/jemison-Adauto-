@@ -98,27 +98,7 @@ function letraB(nome, idade, profissao){
  letraB(obj1.nome, obj1.idade, obj1.profissao)
 
 
-/*
- 3. Resolva os passos a seguir: 
-    
- a) Crie uma variável de escopo global que guarde um `array` vazio chamada `carrinho`
- 
- b) Crie três novos objetos que representem frutas de um sacolão. Eles devem ter as
-  seguintes propriedades: nome (`string`) e disponibilidade (`boolean` - devem começar como
-   `true`)
- 
- c) Crie uma função que **receba** um objeto fruta por **parâmetro** e coloque-a dentro do
-  array de `carrinho`. Invoque essa função passando os três objetos criados. 
- 
- 
-     
- 
- d) Imprima a variável `carrinho` e garanta que ela agora seja um **array preenchido com
-  três objetos.** 
- */
- 
 
-let carrinho = []
 
 
 
