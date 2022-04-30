@@ -107,10 +107,3 @@ function letraB(nome, idade, profissao){
 
 
 
-
-
-
-
-
-
-
