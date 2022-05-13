@@ -17,7 +17,9 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-  
+    const arrayOrdenado = array.map((numero)=> if(){
+      
+    })
 }
 
 // EXERCÍCIO 04
