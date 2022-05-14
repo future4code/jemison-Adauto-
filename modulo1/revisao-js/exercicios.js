@@ -17,34 +17,61 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-    const arrayOrdenado = array.map((numero)=> if(){
-      
-    })
+  function ordenaNumeros(a, b) {
+    return a - b;
+  }   
+  return array.sort(ordenaNumeros)
 }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+  let  numberPar = []
+    for (let posicao = 0; posicao < array.length; posicao++){
+      if(array[posicao] % 2 === 0){
+        numberPar.push(array[posicao])
+      }
+    }
+  return numberPar
 }
-
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+  let parElevado = []
+      for (let i = 0; i < array.length; i++){
+    if(array[i] % 2 === 0){
+      parElevado.push(array[i] * array[i])
+     }
+  }
+    return parElevado
 }
-
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+  let maior = -1
+  for (let i = 0; i < array.length; i++){
+       if(array[i] > maior){
+       maior = array[i]}
+  }
+  return maior
 }
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-
+  const objeto = {
+    maiorNumero: Math.max(num1, num2),
+    maiorDivisivelPorMenor: Math.max(num1, num2) % Math.min(num1, num2) === 0,
+    diferenca: Math.max(num1, num2) - Math.min(num1, num2)
+  }
+  return objeto
 }
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
+   const primeirosPares = []
+    for(let i = 0; primeirosPares.length < n; i++){
+      if (i % 2 === 0){
+        primeirosPares.push(i)
+      }
+    }
+    return primeirosPares
 }
 
 // EXERCÍCIO 09
