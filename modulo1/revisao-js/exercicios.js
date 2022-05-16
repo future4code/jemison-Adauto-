@@ -76,12 +76,24 @@ function retornaNPrimeirosPares(n) {
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-
+if(ladoA === ladoB && ladoA === ladoC){
+  return "Equilátero"
+} else if(ladoA === ladoB && ladoA !== ladoC || ladoA === ladoC && ladoB !== ladoC || 
+  ladoB === ladoC && ladoB !== ladoA) {
+  return  "Isósceles"
+} else if(ladoA !== ladoB && ladoA !== ladoC) {
+  return "Escaleno"
+}
 }
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
+  function ordenaNumeros(a, b) {
+    return a - b;
+  }   
+  return array.sort(ordenaNumeros)
+  const segundoMaiorESegundoMenor = retornaSegundoMaiorESegundoMenor.filter(numero, indice)
+  return indice(1, array.length[-2])
 }
 
 // EXERCÍCIO 11
