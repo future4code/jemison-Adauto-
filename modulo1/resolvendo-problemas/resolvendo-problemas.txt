@@ -1,0 +1,8 @@
+Os 7 passos para resolver um problema consiste em: 1)ter atenção no enunciado; ler com cuidado prestando bastante atenção
+aos detalhes, 2) Retirar informações relebantes; após ler, releia o enunciado e grife ou risque seja la o q for melhor para
+vc para se atentar as informações principais do problema, 3) Pensar entradas e saidas; Apos analisar as principais questões
+vc tera como base as informações para entrada do codigo e o q ela devera retornar. 4) Fazer um esquema visual; fazer um esboço 
+do codigo. 5) Criar codigo feio; Onde vc for criar suas linhas de comando criar um codigo para alcançar o resultado desejado.
+6) Testar força-bruta; por seu codigo feio para rodar, se nao funcionar refaça! 7) Refatorar; veja o que pode melhorar nele
+o q vc poderia simplificar para chegar ao mesmo resulado. Essa é um linha de raciocinio para mapear uma estrada para chegar 
+ao objetivo caso vc se sinta sem uma direção para começar.
