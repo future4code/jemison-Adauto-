@@ -1,0 +1,17 @@
+body{
+    background-color: orange;
+}
+.title{
+    color: aqua;
+}
+.fraseEfeito{
+    color: green;
+}
+
+a{
+    color: blue;
+    background-color:whitesmoke ;
+    padding: 5px 10px 5px 10px;
+    margin-top:1px;
+    padding: 1px;
+}
