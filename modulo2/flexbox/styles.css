@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+    
+}
+
+.grupo{
+   display:flex
+   
+}
+
+header{
+    padding: 0 20 0 0;
+    display: flex;
+    background-color: mediumvioletred;
+    justify-content: space-between;
+    
+}
+
+#bolo-cabecario{
+    height: 20px;
+}
+
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 90%;
+}
+#menu1{
+    display: flex;
+}
+
+.menu{
+    height: 300px;
+    width: 10%;
+    background: #f2d0e0;
+    display: flex;
+}    
+#menu1{
+    display: flex;
+    flex-direction: column;
+}
+#home-menu{
+    height: 10px;
+}
+
+.produtos-menu{
+    height: 10px;
+}
+
+.carrinho-menu{
+    height: 10px;
+}
+.perfil-menu{
+    height: 10px;
+}
+
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card p{
+    font-size: 10px;
+}
+
+#bolo-principal{
+    height: 100px;
+    width: 100px;
+}
+
+#div-pai{
+    display: flex;
+    flex-direction: row;
+}
+
+footer{
+    padding: 0 100 0 0;
+    display: flex;
+    background-color: mediumvioletred;
+    justify-content: space-around;
+}
