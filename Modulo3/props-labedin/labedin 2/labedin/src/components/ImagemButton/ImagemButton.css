@@ -1,7 +1,7 @@
 .image-button-container {
     display: flex;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 50px;
     width: 200px;
     padding: 15px 30px;
@@ -11,4 +11,26 @@
 .image-button-container > img {
     width: 30px;
     margin-right: 10px;
+}
+
+.image-button-container {
+     background: linear-gradient(to left, #cf1818, #e2b1b1) ;
+}
+
+.image-button-container {
+     box-shadow: 10px 10px 25px -10px rgb(20, 20, 20);
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px){
+
+    .image-button-container{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 5px;
+        margin-bottom: 10px;
+        height: 250px;
+
+    }
 }

@@ -4,7 +4,7 @@
     border: 1px solid black;
     padding: 20px 10px;
     margin-bottom: 10px;
-    height: 200px;
+    height: 100px;
 }
 
 .bigcard-container > img {
@@ -21,4 +21,18 @@
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    div{
+        background-color: rgb(0, 255, 221);
+    }
+    .bigcard-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: max(15px, 10vw);
+
+    }
+    
 }

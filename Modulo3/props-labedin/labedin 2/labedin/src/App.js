@@ -8,6 +8,10 @@ import posto from './components/img/gasolina-velha-2.jpg';
 import malagueta from './components/img/malaguetabistro.jpg';
 import home from './components/img/home.jfif';
 import email from './components/img/email.jfif';
+import insta from './components/img/instagranrisco.png';
+import linkedin from './components/img/linkedin.png';
+
+
 function App() {
   return (
     <div className="App">
@@ -26,18 +30,18 @@ function App() {
         <div>
           <CardVerMais
           imagem={home}
-          nome="São Paulo/SP"
+          nome="Sacomã - São Paulo/SP"
           />
         </div>
         <div>
           <CardVerMais
           imagem={email}
-          nome="adauto.matosjr@gmail.com"
+          nome="adauto@labenu.com"
           />
         </div>
       </div>
 
-      <div className="page-section-container">
+      <div className="page-section-container2">
         <h2>Experiências profissionais</h2>
         <CardGrande 
           imagem={posto} 
@@ -52,7 +56,7 @@ function App() {
         />
       </div>
 
-      <div className="page-section-container">
+      <div className="page-section-container3">
         <h2>Minhas redes sociais</h2>
         <ImagemButton 
           imagem="https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png" 
@@ -60,9 +64,14 @@ function App() {
         />        
 
         <ImagemButton 
-          imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
-          texto="Twitter" 
-        />        
+          imagem={insta} 
+          texto="Instagran" 
+        />  
+
+        <ImagemButton
+           imagem={linkedin}
+           texto="Linkedin"  
+        />       
       </div>
     </div>
   );
