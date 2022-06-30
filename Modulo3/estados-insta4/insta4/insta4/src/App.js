@@ -11,25 +11,25 @@ const MainContainer = styled.div`
 function App() {
 return(
   <MainContainer>
-           <Post
-            nomeUsuario={'paulinha'}
+          <Post
+            nomeUsuario={'Bruna'}
             fotoUsuario={'https://picsum.photos/50/50'}
             fotoPost={'https://picsum.photos/200/150'}
           />
 
-<Post
+          <Post
             nomeUsuario={'Antonio'}
             fotoUsuario={'https://picsum.photos/50/34'}
             fotoPost={'https://picsum.photos/200/200'}
           />
 
-<Post
+          <Post
             nomeUsuario={'John'}
             fotoUsuario={'https://picsum.photos/50/45'}
             fotoPost={'https://picsum.photos/200/171'}
           />
 
-<Post
+          <Post
             nomeUsuario={'Yuri'}
             fotoUsuario={'https://picsum.photos/50/23'}
             fotoPost={'https://picsum.photos/200/151'}
