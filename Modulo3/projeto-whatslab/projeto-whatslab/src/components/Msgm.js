@@ -1,0 +1,73 @@
+import React,{useState} from 'react'
+import {AreaDeMsgm, Divpai, NavDi, NavLeft, NavCenter, MainSendMensagem} from './styled'
+
+
+
+
+export function Msgm(){
+
+    const [inputUsuario ,setInputNomeDeUsuario] = useState('');
+    const[inputMensagem,setInputMensagem] = useState('');
+    const[usuario,setUsuario] = useState ([{nome: "Adauto", mensagem: "Olá, como posso te ajudar!" }])
+    
+    function handleInputNomeDeUsuario (e){
+        setInputNomeDeUsuario(e.target.value)
+        
+    }
+    function handleInputMensagem (e){
+        setInputMensagem(e.target.value)
+    }
+
+    const addUsuario = (e) => {
+        e.preventDefault()
+
+        setUsuario ([...usuario, {nome:inputUsuario, mensagem:inputMensagem}])
+        setInputMensagem("")
+        setInputNomeDeUsuario("")
+    }
+    
+    const mensagensMapeada = usuario.map((pessoa, index) => {
+        return(
+            <div key={index}>
+                <p>{pessoa.nome}</p>
+                <p>{pessoa.mensagem}</p>
+            </div>
+        )
+    })
+
+    
+    return (
+        <Divpai>
+            <NavDi><p>nav esquera</p></NavDi>
+            <NavCenter>
+            <AreaDeMsgm>            
+            
+            
+                {mensagensMapeada}
+
+            </AreaDeMsgm>
+            <MainSendMensagem>
+                
+             <label/>
+                <input 
+                 placeholder="Escreva seu nome" size={15}
+                 value = {inputUsuario}
+                 onChange = {handleInputNomeDeUsuario}
+                /> 
+             <label/>
+             <input 
+                 placeholder="Escreva sua mensagem" size={40}
+                 value = {inputMensagem}
+                 onChange = {handleInputMensagem}
+             />
+             <button onClick={addUsuario}>Enviar</button>
+            </MainSendMensagem>
+            </NavCenter>
+            <NavLeft><p>nav direita</p></NavLeft>
+        </Divpai>
+    );
+  }
+
+
+
+
