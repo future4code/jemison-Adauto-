@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {AreaDeMsgm, Divpai, NavDi, NavLeft, NavCenter, MainSendMensagem} from './styled'
+import {AreaDeMsgm, Divpai, NavDi, NavLeft, NavCenter, MainSendMensagem, Button, BalaoMsgm} from './styled'
 
 
 
@@ -27,18 +27,21 @@ export function Msgm(){
     }
     
     const mensagensMapeada = usuario.map((pessoa, index) => {
-        return(
-            <div key={index}>
-                <p>{pessoa.nome}</p>
+        
+            
+                return(
+            <BalaoMsgm key={index}>
+                <b><u>{pessoa.nome}</u></b>
                 <p>{pessoa.mensagem}</p>
-            </div>
-        )
+            </BalaoMsgm>
+                )
+              
     })
 
     
     return (
         <Divpai>
-            <NavDi><p>nav esquera</p></NavDi>
+            <NavDi></NavDi>
             <NavCenter>
             <AreaDeMsgm>            
             
@@ -60,10 +63,10 @@ export function Msgm(){
                  value = {inputMensagem}
                  onChange = {handleInputMensagem}
              />
-             <button onClick={addUsuario}>Enviar</button>
+             <Button onClick={addUsuario}>Enviar</Button>
             </MainSendMensagem>
             </NavCenter>
-            <NavLeft><p>nav direita</p></NavLeft>
+            <NavLeft></NavLeft>
         </Divpai>
     );
   }
