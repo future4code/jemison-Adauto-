@@ -10,6 +10,7 @@ height: 100%;
 export const AreaDeMsgm = styled.div`
 display: flex;
 flex-direction:column;
+justify-content: flex-end;
 position: relative;
 padding: 10em;
 border: 1px solid #000;
@@ -22,10 +23,16 @@ height:100%;
 export const BalaoMsgm = styled.div`
 
 background-color: aqua;
-display: flex;
-justify-content: flex-start;
+text-align: start;
 color: red;
-
+border: 1px solid black;
+border-radius: 0.5em;
+box-shadow: 0.2vw 0.2vw 0.5vw grey;
+width: fit-content;
+margin: 1vw;
+float:left;
+position:relative;
+right: 55% ; 
 `
 
 export const Button = styled.button`
