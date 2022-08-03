@@ -1,32 +1,16 @@
-import React,{useState} from 'react';
-import TelaMatchs from './components/match';
-import TelaInicial from './components/inicio';
+import React from 'react';
 
 
 
-const App = (props) => {
-  const [tela, setTela] = useState('inicial')
- 
 
-  const trocaTela = (tela) =>{
-  setTela(tela)
-}
-
-   const renderizarTela = () =>{
-     switch (tela) {
-      case 'inicial':
-         return <TelaInicial trocaTela={trocaTela}  />
-      case 'matchs':
-       return <TelaMatchs trocaTela={trocaTela}  />
-    default:
-         return null;
-    }
-   }
+const App = () => {
+  
+        
 
   return (
     
     <div>
-      {renderizarTela()}
+      
     </div>
   );
 }
