@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import React,{useState, useEffect} from 'react';
-import { baseURL } from '../constants';
-import axio from axio
+import axios from 'axios';
 
 const GetMatches ="https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:Adauto/matches"
 const Clear="https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:Adauto/clear"
 
-function Matche (props) {
+function Match (props) {
     const [lista, setLista] = useState([])
 
     const pegaLista = () =>{
@@ -14,24 +13,23 @@ function Matche (props) {
        .get(GetMatches)
        .then((response) =>{
         console.log(response.data.matches)
+        setLista(response.data.matches)
        })
        .catch((err) =>{
         console.log(err)
        })
 
-
+    }
     useEffect(() =>{
 
-       pegaPerfil()
+       pegaLista()
         
     }, [])
 
 
-    const escolherPessoa = (choice) =>{
-            const body = {
-            id:pessoa.id,
-            choice:choice,
-        }
+    const apagaPerfil = () =>{
+           
+       
         axios
         .put(Clear)
         .then((response) => {
@@ -41,8 +39,8 @@ function Matche (props) {
         .catch((err) =>{
             console.log(err)
         })
-       }
-
+       
+    }
        return(
         <div>
             <div>
@@ -54,12 +52,14 @@ function Matche (props) {
                 </div>
                 {lista.map((item) => {
                     return (
+                        <div>
                     <img src={item.foto} key={lista.id}/>
                     {item.name}
+                    </div>
                     )
                 
-            })}
-            </div>
+                })}
+                </div>
             <div>
                 <button onClick={apagaPerfil}>Deletar Matchs</button>
             </div>
@@ -67,6 +67,6 @@ function Matche (props) {
        )
     }
 
-}
+
 
 export default Match;

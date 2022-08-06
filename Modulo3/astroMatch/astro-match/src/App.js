@@ -22,7 +22,7 @@ function App(props) {
   
   return (
     <div>
-      <p>Hello world</p>
+      {renderizarTela()}
     </div>
   );
 }
