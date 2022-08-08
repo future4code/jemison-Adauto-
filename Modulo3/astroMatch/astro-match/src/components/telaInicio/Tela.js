@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import Card from '../card/Card'
 
+import Card from '../card/Card'
+import { ContainerHeader, ContainerCard, FontTitulo, ContainerBtton, ContainerH1 } from './telastyled'
 
 function TelaInicial(props) {
 
@@ -8,15 +8,17 @@ function TelaInicial(props) {
 
     return(
             
-                <div>
-                    <div>
-                        <h1>AstroMatch</h1>
-                    </div>
-                    <div>
+                <ContainerCard>
+                    <ContainerHeader>
+                    <ContainerH1>
+                        <FontTitulo>Astromatch!</FontTitulo>
+                    <ContainerBtton>
                         <button onClick={() => props.trocaTela('matchs')}>Ir para Matchs</button>
-                    </div>
+                    </ContainerBtton>
+                    </ContainerH1>
+                    </ContainerHeader>
                     <Card/>
-                </div>
+                </ContainerCard>
               
     )
 }

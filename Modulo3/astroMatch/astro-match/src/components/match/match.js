@@ -1,6 +1,7 @@
-import styled from 'styled-components';
 import React,{useState, useEffect} from 'react';
 import axios from 'axios';
+import { ContainerList, HeaderContainer, ContainerMatchs, ButtonContainer, ButtonHeader, FontTitulo } from './styled'
+
 
 const GetMatches ="https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:Adauto/matches"
 const Clear="https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:Adauto/clear"
@@ -42,28 +43,28 @@ function Match (props) {
        
     }
        return(
-        <div>
-            <div>
+        <ContainerList>
+            <HeaderContainer>
                 <div>
-                    <h1>AstroMatch</h1>
+                    <FontTitulo>Astromatch!</FontTitulo>
                 </div>
-                <div>
+                <ButtonHeader>
                     <button onClick={() => props.trocaTela('inicial')}>Voltar</button>
-                </div>
+                </ButtonHeader>
                 {lista.map((item) => {
                     return (
-                        <div>
-                    <img src={item.foto} key={lista.id}/>
-                    {item.name}
-                    </div>
+                         <ContainerMatchs>
+                            <img src={item.photo} key={lista.id}/>
+                             {item.name}
+                         </ContainerMatchs>
                     )
                 
                 })}
-                </div>
-            <div>
+                </HeaderContainer>
+            <ButtonContainer>
                 <button onClick={apagaPerfil}>Deletar Matchs</button>
-            </div>
-        </div>
+            </ButtonContainer>
+        </ContainerList>
        )
     }
 

@@ -1,8 +1,9 @@
-import styled from 'styled-components';
 import React,{useState, useEffect} from 'react';
 import axios from 'axios';
 import Coracao from '../image/like.jpg'
 import Excluir from '../image/hate.jpg'
+import { ContainerButton, ContainerImage, Image, ImageBlur, TextContainer, NameAge, Bio } from '../card/styled'
+
 
 const GetProfile ='https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:Adauto/person'
 const PostChoose ='https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:Adauto/choose-person'
@@ -51,18 +52,18 @@ function Card() {
 
     return (
       <div>
-         <div>
-                <img  src={pessoa.photo} alt='Imagem Usuario' />
-                
-            <div>
-                <div> {pessoa.name}, {pessoa.age} </div>
-                <div> {pessoa.bio} </div>
-            </div>
-            </div>
-            <div>
-                <button onClick={hatePerson}><img src ={Excluir} /></button>
-                <button onClick={likePerson}><img src ={Coracao} /></button>
-            </div>
+         <ContainerImage>
+                <Image  src={pessoa.photo} alt='Imagem Usuario' />
+                <ImageBlur src={pessoa.photo} />
+            <TextContainer>
+                <NameAge> {pessoa.name}, {pessoa.age} </NameAge>
+                <Bio> {pessoa.bio} </Bio>
+            </TextContainer>
+            </ContainerImage>
+            <ContainerButton>
+                <button onClick={hatePerson}><img src ={Excluir} alt="Deslike" width="55" height="55" /></button>
+                <button onClick={likePerson}><img src ={Coracao} alt="Like" width="55" height="55" /></button>
+            </ContainerButton>
         
       </div>
     )
