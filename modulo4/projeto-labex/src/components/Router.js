@@ -4,7 +4,7 @@ import Home from './Home';
 import ApplicationFormPage from './publico/ApplicationFormPage';
 import ListTripsPage from './publico/ListTripsPage';
 import Login from './privado/Login';
-import AdmHome from './privado/AdminHomePage';
+import AdminHomePage from './privado/AdminHomePage';
 import CreatTrip from './privado/CreateTripPage';
 import TripDetails from './privado/TripDetailsPage';
 
@@ -15,13 +15,12 @@ function Router() {
         <BrowserRouter>
              <Routes>
                 <Route index element={ <Home />}/> 
-                <Route path='/trips/application' elemnt={ApplicationFormPage}/>
-                <Route path='/trips/list' element={ListTripsPage}/>
-                <Route path='/login' element={Login}/>
-                <Route path='admin/trips/list' element={<AdmHome/>} />
-                <Route path='admin/trips/creat' element={<CreatTrip/>} />
-                <Route path='admin/trips/:id' element={<TripDetails/>} />
-                
+                <Route path='/trips/application' element={<ApplicationFormPage/>}/>
+                <Route path='/trips/list' element={<ListTripsPage/>}/>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/admin/trips/list' element={ <AdminHomePage/> } />
+                <Route path='/admin/trips/creat' element={ <CreatTrip/>} />
+                <Route path='/admin/trips/:id' element={ <TripDetails/> } />                
             </Routes>     
         </BrowserRouter>
     )
