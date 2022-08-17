@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './Home';
-import ApplicationFormPage from './publico/ApplicationFormPage';
-import ListTripsPage from './publico/ListTripsPage';
-import Login from './privado/Login';
-import AdminHomePage from './privado/AdminHomePage';
-import CreatTrip from './privado/CreateTripPage';
-import TripDetails from './privado/TripDetailsPage';
+import ApplicationFormPage from './ApplicationFormPage';
+import ListTripsPage from './ListTripsPage';
+import Login from './Login';
+import AdminHomePage from './AdminHomePage';
+import CreatTrip from './CreateTripPage';
+import TripDetails from './TripDetailsPage';
 
 
 export function Router() {

@@ -5,7 +5,7 @@ import axios from "axios";
 export function useRequestData(url) {
 
 
-    const[dataListTrip,setDataListTrip]= useState(undefined)
+    const[listTrip,setListTrip]= useState(undefined)
 
     const [isLoadingListTrip, setIsLoadingListTrip] = useState (false)
 
@@ -16,14 +16,14 @@ export function useRequestData(url) {
         axios.get(url) 
         .then((response)=>{
         setIsLoadingListTrip(false) 
-        setDataListTrip(response.data) 
+        setListTrip(response.data) 
       }).catch((error)=>{
         setIsLoadingListTrip(false) 
         console.log(error)
         setErrorListTrip(error) 
       })},[url])
       
-      return [dataListTrip,isLoadingListTrip,errorListTrip] 
+      return [listTrip,isLoadingListTrip,errorListTrip] 
     
 }
 
