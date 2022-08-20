@@ -6,7 +6,7 @@ import axios from "axios";
 
 function Login() {
     
-    const urlLogin ="https://us-central1-labenu-apis.cloudfunctions.net/labeX/adauto/login"
+    const urlLogin ="https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/login"
 
     const [body,onChange,clear]=useForm({ email: "", password: ""})
    
