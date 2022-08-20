@@ -6,17 +6,18 @@ import axios from "axios";
 
 function Login() {
     
-    const urlLogin ="https://us-central1-labenu-apis.cloudfunctions.net/labeX/adauto-matos-jemisson/login"
+    const urlLogin ="https://us-central1-labenu-apis.cloudfunctions.net/labeX/adauto/login"
 
     const [body,onChange,clear]=useForm({ email: "", password: ""})
    
-    const fazerLogin = (event) => {
+    const makeLogin = (event) => {
         event.preventDefault()
-        axios.post(urlLogin, body).
-        then((response)=>{
+
+        axios.post(urlLogin, body)
+        .then((response)=>{
             console.log(response.data);
         }).catch((error)=>{
-            console.log("deu erro")
+            console.log("There is an error")
         })
         clear();
     }
@@ -42,16 +43,16 @@ function Login() {
             <h1> Login </h1>
                 <button onClick={goToHome}>Home</button><br></br>                
                 <div>
-           <form onSubmit={fazerLogin}>
+           <form onSubmit={makeLogin}>
                 <label htmlFor="email">E-mail: </label>
                 <input
-                    id="email"
-                    name="email"
-                    type="email"
+                    id="email" //colocar igual ao htmlFor do label
+                    name="email" //colocar igual a propriedade que está no estado inicial do useForm!!!!!!
+                    type="email" //faz validações de e-mail
                     placeholder="E-mail"
                     value={body.email}
                     onChange={onChange}
-                    required 
+                    required  //torna campo obrigatório
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 />
                 <label htmlFor="password">Senha: </label>

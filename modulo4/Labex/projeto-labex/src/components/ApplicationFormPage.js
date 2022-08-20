@@ -9,10 +9,11 @@ function ApplicationFormPage (){
 
     const [body,onChange,clear]=useForm({ email: "", password: ""})
    
-    const fazerLogin = (event) => {
+    const makeLogin = (event) => {
         event.preventDefault()
-        axios.post({form}, body).
-        then((response)=>{
+
+        axios.post({form}, body)
+        .then((response)=>{
             console.log(response.data);
         }).catch((error)=>{
             console.log("deu erro")
@@ -44,7 +45,7 @@ function ApplicationFormPage (){
                 <button onClick={goToHome}>Home</button>
                  <button onClick={goToList}>List</button>
                  <button onClick={goToLogin}>Login</button>
-                 <form>     
+                 <form onSubmit={makeLogin}>     
                     <label htmlFor='name'>name: no mínimo 3 letras</label> 
                     <input  
                          id="name"
@@ -58,13 +59,13 @@ function ApplicationFormPage (){
                     /><br></br>
                     <label>age: maior do que 18</label> 
                     <input
-                         id=""
-                         name=""
-                         value=""
-                         onChange=""
-                         placeholder=""
+                         id="age"
+                         name="age"
+                         value={body.age}
+                         onChange={onChange}
+                         placeholder="age"
                          required
-                         type=""
+                         type="number"
                          pattern=""
                     /><br></br>
                     <label>applicationText: no mínimo 30 caracteres</label> 
