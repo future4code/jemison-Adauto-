@@ -9,11 +9,11 @@
   }
 
   console.log(checaTriangulo(4, 4, 4))*/
+  const ladoA = process.argv[2]
+  const ladoB = process.argv[3]
+  const ladoC = process.argv[4]
 
   function cauculaTriangulo(){
-    const ladoA = process.argv[2]
-    const ladoB = process.argv[3]
-    const ladoC = process.argv[4]
 
     if (ladoA !== ladoB && ladoB !== ladoC) {
         return "Escaleno";
