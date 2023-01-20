@@ -18,8 +18,8 @@ POST http://localhost:3003/movie/create
 Content-Type: application/json
 
 {
-    "title": "Homem de ferro",
-    "description": "Filme de ação",
-    "duration_in_minutes": 5,
-    "year_of_release": 3
+    "title": "Efeito borboleta",
+    "description": "Filme de suspence",
+    "duration_in_minutes": 89,
+    "year_of_release": 2010
 }
