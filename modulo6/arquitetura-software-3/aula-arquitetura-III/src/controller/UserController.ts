@@ -7,7 +7,7 @@ import { UserImputDTO } from "../models/userDTO";
 export class UserController {
    public createUser = async (req: Request,res: Response) => {
       try {
-         const UserImputDTO = {
+         const input: UserImputDTO = {
             name: req.body.name,
             nickname: req.body.nickname,
             email: req.body.email,
@@ -15,7 +15,7 @@ export class UserController {
          }
          const userBusiness = new UserBusiness()
          
-         await userBusiness.createUser(UserImputDTO)
+         await userBusiness.createUser(input)
 
          res.status(201).send({ message: "Usuário criado!" })
       } catch (error: any) {

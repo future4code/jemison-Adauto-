@@ -22,13 +22,17 @@ export class UserBusiness {
             
             const id: string = v4()
             
-            
-            await userDatabase.insertUser({
+            const user:user = {
+
                id,
                name,
                nickname,
                email,
                password
+            }
+               
+            
+            await userDatabase.insertUser({
             })
             
          } catch (error: any) {
