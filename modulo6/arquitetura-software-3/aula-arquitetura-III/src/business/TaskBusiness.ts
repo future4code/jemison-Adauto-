@@ -1,4 +1,5 @@
 import { TaskDatabase } from "../data/TaskDatabase"
+import { generationId } from "../services/idGeneretor"
 
 
 export class TaskBusiness {
@@ -18,7 +19,7 @@ export class TaskBusiness {
             throw new Error('"title", "description", "deadline" e "authorId" são obrigatórios')
          }
 
-         const id: string = Date.now().toString()
+         const id: string = generationId
 
          const taskDatabase = new TaskDatabase()
 

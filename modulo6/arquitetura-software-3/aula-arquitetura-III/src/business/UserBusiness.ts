@@ -5,7 +5,8 @@ import { UserImputDTO } from "../models/userDTO";
 
 export class UserBusiness {
    public createUser = async (input: UserImputDTO) => {
-      //instanciiar fora do try
+      //instanciar fora do try
+      
       
       try {
          const userDatabase = new UserDatabase()
@@ -32,18 +33,17 @@ export class UserBusiness {
             }
                
             
-            await userDatabase.insertUser({
-            })
+            await userDatabase.insertUser(user)
             
          } catch (error: any) {
             throw new Error(error.message)
          }
    }
    public getUsers = async () => {
-      //instanciiar fora do try  
+      //instanciar fora do try  
       try {
          const userDatabase = new UserDatabase()
-         console.log("estou aki");
+         console.log("estou aqui");
          
          return await userDatabase.getUsers();
          

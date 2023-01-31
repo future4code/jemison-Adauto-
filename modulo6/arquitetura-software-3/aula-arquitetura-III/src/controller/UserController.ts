@@ -23,7 +23,7 @@ export class UserController {
       }
    }
 
-   public getUsers = async (req: Request, res: Response) => {
+   public getUsers = async (req: Request, res: Response): Promise<void> => {
       try {
 
          const userBusiness = new UserBusiness()

@@ -28,7 +28,7 @@ export class UserDatabase extends BaseDatabase {
    }
    
    
-   public getUsers = async () => {
+   public getUsers = async (): Promise<user[]> => {
       try {
          //inia conexão
          UserDatabase.connection.initialize()
