@@ -1,8 +1,12 @@
-// Para acessar os parâmetros: process.argv[]
+// Para acessar os parâmetros: process.argv
 
-const nome = 'Adauto'
-const idade = Number(33)
-const seteAnos = Number(7)
-const soma = idade + seteAnos
+     const nome = process.argv[2]
+     const idade = Number(process.argv[3])
 
-console.log(`Olá, ${nome}! Você tem ${idade} anos. Em sete anos você terá ${soma}`)
+function exercicioLetraBC() {
+     const sete = Number(7) 
+     const soma= Number(idade) + Number(sete)
+     
+     return `Olá, ${nome}! Você tem ${idade} anos. Em sete anos você terá ${soma}`
+}
+console.log(exercicioLetraBC)
