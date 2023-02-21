@@ -7,6 +7,6 @@ function exercicioLetraBC() {
      const sete = Number(7) 
      const soma= Number(idade) + Number(sete)
      
-     return `Olá, ${nome}! Você tem ${idade} anos. Em sete anos você terá ${soma}`
+     return 
+     console.log(`Olá, ${nome}! Você tem ${idade} anos. Em sete anos você terá ${soma}`)
 }
-console.log(exercicioLetraBC)

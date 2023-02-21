@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-        "start": "node ./index.js" 
+        "start": "node ./exercicio1/index.js" 
   },
   "keywords": [],
-  "author": "",
+  "author": "Adauto de Matos",
   "license": "ISC"
 }
