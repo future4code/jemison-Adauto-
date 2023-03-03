@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-        "start": "node ./exercicio1/index.js" 
+    "exercicio1": "node./exercicio1.js",
+    "exercicio2": "node./exercicio2.js",
+    "exercicio3": "node./exercicio3.js"
   },
   "keywords": [],
   "author": "Adauto de Matos",
