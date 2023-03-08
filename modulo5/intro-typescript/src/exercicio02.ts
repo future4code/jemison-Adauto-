@@ -5,13 +5,13 @@
     console.log([cor1, cor2, cor3])
  }*/
 
- const cor1 = process.argv[2]
- const cor2 = process.argv[3]
- const cor3 = process.argv[4]
+ const cor1 = process.argv[2];
+ const cor2 = process.argv[3];
+ const cor3 = process.argv[4];
 
  function imprimeTresCoresFavoritas(){
          
        return  "Minhas cores favoritas são:" + cor1 + " " + cor2 + " " + cor3
     }
     
-    console.log(imprimeTresCoresFavoritas())
+    console.log(imprimeTresCoresFavoritas(cor1, cor2, cor3))
