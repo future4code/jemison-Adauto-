@@ -15,8 +15,8 @@
     return diferenca 
   }*/
 
-  const num1 = Number(process.argv[2])
-  const num2 = Number(process.argv[3])
+  const num1 = Number(process.argv[2]);
+  const num2 = Number(process.argv[3]);
 
   function comparaNumero(){
     if (num1 > num2) {
@@ -32,4 +32,4 @@
   return diferenca 
 }
 
-console.log(comparaDoisNumeros(num1, num2))
+console.log(comparaNumero(num1, num2))
