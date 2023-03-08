@@ -16,8 +16,12 @@
     }
 }
  */
+       const  anoAtual = Number(process.argv[2]);
+       const  anoNascimento = Number(process.argv[3]);
+       const  anoEmissao = Number(process.argv[4])
+         
 
-function checaRenovacaoRG(anoAtual:number, anoNascimento:number, anoEmissao:number ):string {
+function checaRenovacaoRG() {
     let idade = anoAtual - anoNascimento
     let tempoCarteira = anoAtual - anoEmissao
 
@@ -35,4 +39,4 @@ function checaRenovacaoRG(anoAtual:number, anoNascimento:number, anoEmissao:numb
        }
 }
 
-console.log(checaRenovacaoRG(2022, 1997, 2015))
+console.log(checaRenovacaoRG(anoAtual, anoNascimento, anoEmissao))
