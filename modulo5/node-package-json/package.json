@@ -1,0 +1,14 @@
+{
+  "name": "package-json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "exercicio1": "node./exercicio1.js",
+    "exercicio2": "node./exercicio2.js",
+    "exercicio3": "node./exercicio3.js"
+  },
+  "keywords": [],
+  "author": "Adauto de Matos",
+  "license": "ISC"
+}
