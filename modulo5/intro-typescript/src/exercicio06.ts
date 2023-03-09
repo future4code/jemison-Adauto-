@@ -24,7 +24,7 @@ function number(){
     const mutiplica = number1 * number2;
           if (number1 > number2){
             return "o maior é " + number1;
-          } if else(number1 < number2){
+          } else if (number1 < number2){
             return "o maior é " + number2;
           }else{
             return "iguais"
