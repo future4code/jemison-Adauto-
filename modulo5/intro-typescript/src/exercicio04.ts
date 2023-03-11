@@ -1,35 +1,22 @@
-/*function comparaDoisNumeros(num1, num2) {
-    let maiorNumero;
-    let menorNumero;
-  
-    if (num1 > num2) {
-      maiorNumero = num1;
-      menorNumero = num2;
+
+function comparaNumero(num1:number, num2:number) :number{
+   
+  let maiorNumero:number = 12
+  let menorNumero:number = 4234
+
+    if(num1 > num2) {
+
+
+        maiorNumero = num1
+        menorNumero = num2
     } else {
-      maiorNumero = num2;
-      menorNumero = num1;
+        maiorNumero = num2
+        menorNumero = num1
     }
   
-    const diferenca = maiorNumero - menorNumero;
-  
-    return diferenca 
-  }*/
-
-  const num1 = Number(process.argv[2]);
-  const num2 = Number(process.argv[3]);
-
-  function comparaNumero(){
-    if (num1 > num2) {
-        maiorNumero = num1;
-        menorNumero = num2;
-      } else {
-        maiorNumero = num2;
-        menorNumero = num1;
-      }
-  
-  const diferenca = maiorNumero - menorNumero;
+  const diferenca:number = maiorNumero - menorNumero
 
   return diferenca 
 }
 
-console.log(comparaNumero(num1, num2))
+console.log(comparaNumero(45, 23))

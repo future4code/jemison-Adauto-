@@ -8,13 +8,16 @@
     "exercicio02": "tsc && node ./build/exercicio02.js",
     "exercicio03": "tsc && node ./build/exercicio03.js",
     "exercicio04": "tsc && node ./build/exercicio04.js",
-    "exercicio05": "tsc && node ./build/exercicio05.js"
+    "exercicio05": "tsc && node ./build/exercicio05.js",
+    "exercicio06": "tsc && node ./build/exercicio06.js"
   },
   "keywords": [],
   "author": "Adauto",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.14.6",
+    "@types/node": "^18.15.0"
+  },
+  "dependencies": {
     "typescript": "^4.9.5"
   }
 }
