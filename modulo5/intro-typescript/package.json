@@ -9,7 +9,10 @@
     "exercicio03": "tsc && node ./build/exercicio03.js",
     "exercicio04": "tsc && node ./build/exercicio04.js",
     "exercicio05": "tsc && node ./build/exercicio05.js",
-    "exercicio06": "tsc && node ./build/exercicio06.js"
+    "exercicio06": "tsc && node ./build/exercicio06.js",
+    "exercicio07": "tsc && node ./build/exercicio07.js",
+    "exercicio08": "tsc && node ./build/exercicio08.js",
+    "exercicio09": "tsc && node ./build/exercicio09.js"
   },
   "keywords": [],
   "author": "Adauto",
