@@ -56,4 +56,4 @@ Para os exemplos acima, a entrada seria `"ATTGCTGCGCATTAACGACGCGTA"`
 }
 
 const dna = "ATTGCTGCGCATTAACGACGCGTA"
-console.log(dnaParaRna)
+console.log(dnaParaRna(dna))

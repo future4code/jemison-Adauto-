@@ -13,3 +13,16 @@ A função deve retornar um booleano (true ou false) que indica se a inscrição
  */
 
 
+function valida(idade:number, ensinoMedio:string, horasLivres:number  ) :boolean{
+    let condicao1:boolean = idade > 18
+    let condicao2:boolean = ensinoMedio == "sim"
+    let condicao3:boolean = horasLivres > 20
+
+    return condicao1 && condicao2 && condicao3
+    }
+     if(valida(15, "sim", 34)){
+        console.log("aprovado")
+    }else{
+        console.log("reprovado")
+    }
+    
