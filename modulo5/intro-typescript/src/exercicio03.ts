@@ -1,16 +1,9 @@
-/*function checaAnoBissexto(ano) {
-   const cond1 = ano % 400 === 0
-   const cond2 = (ano % 4 === 0) && (ano % 100 !== 0)
-   return cond1 || cond2
-}*/
-
-const digitado = Number(process.argv[2])
-
-function checaAnoBissexto(ano:Number):boolean {
-    const cond1 = ano % 400 === 0
-    const cond2 = (ano % 4 === 0) && (ano % 100 !== 0)
+function checaAnoBissexto(ano:number) :boolean {
+    const cond1:boolean = ano % 400 === 0 ;
+    const cond2:boolean = (ano % 4 === 0) && (ano % 100 !== 0);
     return cond1 || cond2
 }
 
-console.log(checaAnoBissexto(digitado))
+        console.log(checaAnoBissexto(1896))
 
+     
