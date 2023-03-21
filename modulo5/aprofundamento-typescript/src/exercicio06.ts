@@ -1,4 +1,4 @@
-type Produto ={
+type Produto = {
     nome:string,
     preco: string,
     classificacao: string
@@ -37,20 +37,53 @@ const produtos: Produto[] =[
     }
 ]
 
-function addDesconto(produtos: Produto[]): Produto[]{
+//function addDesconto(produtos: Produto[]): Produto[]{
 
-    return produtos.map((produto) => {
-        let desconto: string = "";
-
-        if (produto.classificacao === "Verão") {
-            desconto = "5%";
-        } else if (produto.classificacao === "Inverno") {
-            desconto = '10%';
-        } else if (produto.classificacao === "Banho") {
-            desconto = "4%";
-        } else if (produto.classificacao === "Intimas") {
-            desconto = "7%";
-        }
+    
 
 
-}
+
+
+function addDesconto(produtos: Produto[]): Produto[] {
+    const descontoVerao = 0.05;
+    const descontoInverno = 0.1;
+    const descontoBanho = 0.04;
+    const descontoIntimas = 0.07;
+    
+    const produtosComDesconto = produtos.map(produto => {
+      let desconto = 0;
+      switch (produto.classificacao) {
+        case 'Verão':
+          desconto = descontoVerao;
+          break;
+        case 'Inverno':
+          desconto = descontoInverno;
+          break;
+        case 'Banho':
+          desconto = descontoBanho;
+          break;
+        case 'Intimas':
+          desconto = descontoIntimas;
+          break;
+      }
+      const preco = Number(produto.preco.replace('R$', '').replace(',', '.'));
+      const precoComDesconto = preco * (1 - desconto);
+      const precoComDescontoFormatado = `R$${precoComDesconto.toFixed(2).replace('.', ',')}`;
+      return {
+        ...produto,
+        'preco com desconto': precoComDescontoFormatado
+      };
+    });
+  
+    return produtosComDesconto;
+  }
+  
+ 
+  const produtosComDesconto = addDesconto(produtos);
+  console.log(produtosComDesconto);
+ 
+  
+  
+  
+  
+  
