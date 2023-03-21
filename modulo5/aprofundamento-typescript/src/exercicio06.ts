@@ -37,12 +37,6 @@ const produtos: Produto[] =[
     }
 ]
 
-//function addDesconto(produtos: Produto[]): Produto[]{
-
-    
-
-
-
 
 function addDesconto(produtos: Produto[]): Produto[] {
     const descontoVerao = 0.05;
