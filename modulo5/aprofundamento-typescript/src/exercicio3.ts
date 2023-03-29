@@ -26,15 +26,18 @@ type Pessoa = {
     }
 ]
 
-type persona = {
-    autor:string,
-    texto:string
-}
 
-function buscarPostsPorAutor(posts:any[], autorInformado:string[]) :string[] {
+function buscarPostsPorAutor(posts: Pessoa[], autorInformado:string) :Pessoa[] {
     return posts.filter(
-      (post) => {
-        return post.autor === autorInformado
+      (post) => { 
+       return post.autor === autorInformado
       }
     )
 }
+
+const resultadoBusca = buscarPostsPorAutor(posts, "Dobby")
+for (let i = 0; i < resultadoBusca.length; i++) {
+  const post = resultadoBusca[i];
+  console.log(post.autor + ": " + post.texto);
+}
+

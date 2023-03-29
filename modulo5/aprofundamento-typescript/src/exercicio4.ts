@@ -27,4 +27,6 @@ const pokemon3: pokemon = {
 //precisa rodar o comando novamente.
 
 // c) E se este arquivo estivesse dentro de uma pasta chamada src. O processo seria diferente? Se sim, descreva as diferenças.
-// Já esta na pasta src, então se estivesse fora mudaria apenas o caminho eu acho.
+// Colocaria apenas a nome da pasta para fazer o caminho "tsc src/nomeDoArquivo.ts"
+
+// d - tsc arquivo1.ts arquivo2.ts arquivo3.ts
