@@ -4,7 +4,6 @@ type Produto = {
     valorUnitario: number
 }
 
-
 const produtos: Produto[] = [
 	{ nome: "MacMugffin", quantidade: 37, valorUnitario: 51.040},
 	{ nome: "Vassoura voadora", quantidade: 56, valorUnitario: 210.0},
@@ -19,3 +18,16 @@ const ajustaPreco = (preco :number): string => {
 	const valorAjustado: string = preco.toFixed(2).replace('.', ',')
 	return "R$ "+valorAjustado
 }
+
+function ajustaProdutos(produtos: Produto[]): Produto[] {
+    const produtosMapeados = produtos.map((estoque) => ({
+        ...estoque,
+        valorUnitario: ajustaPreco(estoque.valorUnitario)
+    }))
+    produtosMapeados.sort((a, b) => b.quantidade - a.quantidade)
+    return produtosMapeados
+}
+
+console.log(ajustaProdutos(produtos))
+
+
