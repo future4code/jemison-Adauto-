@@ -1,7 +1,7 @@
-type Produto = {
+type Produto  = {
     nome: string
     quantidade: number
-    valorUnitario: number
+    valorUnitario: number | string
 }
 
 const produtos: Produto[] = [
@@ -22,11 +22,14 @@ const ajustaPreco = (preco :number): string => {
 function ajustaProdutos(produtos: Produto[]): Produto[] {
     const produtosMapeados = produtos.map((estoque) => ({
         ...estoque,
-        valorUnitario: ajustaPreco(estoque.valorUnitario)
+        valorUnitario: typeof estoque.valorUnitario === 'number' ? ajustaPreco(estoque.valorUnitario) : ajustaPreco(parseFloat(estoque.valorUnitario))
+
     }))
     produtosMapeados.sort((a, b) => b.quantidade - a.quantidade)
     return produtosMapeados
 }
+
+
 
 console.log(ajustaProdutos(produtos))
 
