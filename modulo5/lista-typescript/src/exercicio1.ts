@@ -1,8 +1,7 @@
-const nome = process.argv [2]
-const data = process.argv [3]
-const separar = data.split('/')
-const fraseDeApresentacao = "Ola me chamo " + nome + ", nasci no dia " + separar[0] + " do mês de " + separar[1] + " do ano de " + separar[2]
+const frase = (nome: string, dataNascimento: string): string =>{
+    const [dia, mes, ano] = dataNascimento.split("/");
+    const retorno: string = `Olá me chamo ${nome}, nasci no dia ${dia} do mês de ${mes} do ano de ${ano}`;
+    return retorno;
+  };
+   console.log(frase("Adauto", "04/abril/1989"))
 
-
-
-console.log(fraseDeApresentacao)

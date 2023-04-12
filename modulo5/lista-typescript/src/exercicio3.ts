@@ -1,8 +1,10 @@
+import { Type } from "typescript"
+
 type Films = {
-    name:string
-    year:number
-    genre:string
-    score:number
+    nome:string
+    ano:number
+    genero:string
+    score?:number
 }
 enum GENERO {
     ACAO="ação",
@@ -10,14 +12,15 @@ enum GENERO {
     COMEDIA="comédia",
     ROMANCE="romance",
     TERROR="terror"
+}
 
-const option = (item?:number):Films =>{
-const input: Films = {
-    name:process.argv[2],
-    year:Number(process.argv[3]),
-    genre:process.argv[4],
-    score:(item)
-}
-return input
-}
-const ola = Number(process.argv[5])
+const filmes =(nome: string, ano: number, genero: GENERO, score?: number): string => {
+   
+    
+     const movie: string = `O filme ${nome} do ano: ${ano} de ${genero}, teve a pontuação ${score}`
+    
+     return movie
+    }
+
+console.log(filmes("Ojuara o homem que desafio o diabo", 2007, GENERO.COMEDIA, 89))
+    

@@ -1,7 +1,6 @@
-const ex1 = typeof 13
-const ex2 = typeof ['foraBozo']
-const ex3 = typeof {}
-const ex4 = typeof'13'
-const ex5 = typeof false
+const retornaQualQuerTipo = (valorIndefinido: any): void =>{
+    const fraseIndefinido: any = `eu recebo qual quer valor aqui: ${valorIndefinido} .`
+    return fraseIndefinido
+}
 
-console.log(ex1, ex2, ex3, ex4, ex5)
+console.log(retornaQualQuerTipo(23))
